@@ -1,1 +1,6 @@
 <div #charts></div>
+
+<div *ngFor="let project of projectData">
+  <p>Project Name: {{ project.name }}</p>
+  <p>Days Worked: {{ project.data.join(', ') }}</p>
+</div>
