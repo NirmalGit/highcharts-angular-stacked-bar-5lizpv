@@ -1,6 +1,6 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { Chart } from 'angular-highcharts';
-import { HighchartsService } from './highcharts.service.ts';
+import { HighchartsService } from './highcharts.service';
 
 @Component({
   selector: 'my-app',
@@ -85,20 +85,20 @@ export class AppComponent {
         stacking: 'normal',
       },
     },
-    series: this.projectData
-    // series: [
-    //   {
-    //     name: 'John',
-    //     data: [5, 3, 4, 7, 2],
-    //   },
-    //   {
-    //     name: 'Jane',
-    //     data: [2, 2, 3, 2, 1],
-    //   },
-    //   {
-    //     name: 'Joe',
-    //     data: [3, 4, 4, 2, 5],
-    //   },
-    // ],
+    //series: this.projectData
+    series: [
+      {
+        name: 'John',
+        data: [5, 3, 4, 7, 2],
+      },
+      {
+        name: 'Jane',
+        data: [2, 2, 3, 2, 1],
+      },
+      {
+        name: 'Joe',
+        data: [3, 4, 4, 2, 5],
+      },
+    ],
   };
 }
